@@ -1,0 +1,66 @@
+{
+    "editor.formatOnSave": true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "black",
+    "python.linting.pylintEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.linting.flake8Args": [
+        "--max-line-length=88",
+        "--extend-ignore=E203"
+    ],
+    "python.formatting.blackArgs": [
+        "--line-length=88"
+    ],
+    "python.languageServer": "Pylance",
+    "editor.rulers": [
+        88
+    ],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#750f0f18"
+    },
+    "python.analysis.typeCheckingMode": "basic",
+    "python.terminal.activateEnvironment": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/*.pyc": true
+    },
+    "python.linting.mypyEnabled": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "editor.showUnused": true,
+    // Deutsche Meldungen für Flake8 (Kommentare anzeigen)
+    "flake8.builtins": "",
+    "flake8.severity": {
+        "E": "Fehler",
+        "F": "Fehler",
+        "W": "Warnung",
+        "I": "Information"
+    },
+    "flake8.categoryMapping": {
+        "F401": "Nicht verwendeter Import",
+        "F403": "Wildcard-Import",
+        "E501": "Zeile zu lang",
+        "E231": "Fehlende Leerzeichen",
+        "E225": "Fehlende Leerzeichen um Operator",
+        "E303": "Zu viele Leerzeilen"
+    }
+}

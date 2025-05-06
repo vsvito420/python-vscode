@@ -1,0 +1,40 @@
+{
+    "recommendations": [
+        // Python-Kernfunktionalität
+        "ms-python.python", // Haupterweiterung für Python
+        "ms-python.vscode-pylance", // Verbesserte Sprachfunktionen für Python
+        // Formatierung und Linting
+        "ms-python.black-formatter", // Black-Formatierung
+        "ms-python.flake8", // Flake8-Linting
+        "ms-python.isort", // Import-Sortierung
+        "matangover.mypy", // Typenprüfung
+        // Testing
+        "ms-python.pytest", // Pytest-Integration
+        "ryanluker.vscode-coverage-gutters", // Visualisierung der Testabdeckung
+        // Dokumentation
+        "njpwerner.autodocstring", // Automatische Docstring-Generierung
+        "lextudio.restructuredtext", // reStructuredText-Unterstützung für Sphinx
+        // Versionskontrolle
+        "eamodio.gitlens", // Erweiterte Git-Funktionen
+        // Projektorganisation
+        "ms-python.debugpy", // Python-Debugging
+        "gruntfuggly.todo-tree", // Hervorhebung von TODO-Kommentaren
+        "streetsidesoftware.code-spell-checker", // Rechtschreibprüfung
+        "streetsidesoftware.code-spell-checker-german", // Deutsche Rechtschreibprüfung
+        // Performance und Optimierung
+        "ms-toolsai.jupyter", // Jupyter-Notebooks in VS Code
+        "VisualStudioExptTeam.vscodeintellicode", // KI-basierte Code-Vervollständigung
+        // Themenbezogen
+        "kevinrose.vsc-python-indent", // Verbesserte Python-Einrückung
+        "njqdev.vscode-python-typehint", // Type-Hint-Unterstützung
+        "tamasfe.even-better-toml", // TOML-Unterstützung für pyproject.toml
+        "charliermarsh.ruff" // Schneller Python-Linter (Alternative zu Flake8)
+    ],
+    "unwantedRecommendations": [
+        // Widersprüchliche oder überholte Erweiterungen
+        "ms-python.anaconda-extension-pack", // Zu umfangreich für Anfänger
+        "wholroyd.jinja", // Veraltet
+        "dongli.python-preview", // Kann verwirrend sein
+        "lonefy.vscode-JS-CSS-HTML-formatter" // Formatierung sollte eher sprachspezifisch sein
+    ]
+}

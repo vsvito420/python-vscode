@@ -1,0 +1,1 @@
+# Dieses Verzeichnis enthält den Quellcode des Projekts.
