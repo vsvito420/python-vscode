@@ -16,19 +16,36 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.x' # Use latest Python 3.x
+        python-version: '3.8' # Explizit Python 3.8 verwenden
 
-    - name: Install dependencies
+    - name: Install Poetry
       run: |
         python -m pip install --upgrade pip
         pip install poetry
-        poetry install
+
+    - name: Configure Poetry
+      run: |
+        poetry config virtualenvs.in-project true
+
+    - name: Cache Poetry dependencies
+      uses: actions/cache@v4
+      with:
+        path: ./.venv
+        key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-poetry-
+
+    - name: Install dependencies
+      run: poetry install
 
     - name: Run linters and formatters
       run: |
         poetry run black --check .
         poetry run isort --check .
-        poetry run flake8
+        poetry run flake8 --config=.flake8
+
+    - name: Run type checking
+      run: poetry run mypy src tests
 
     - name: Run tests
       run: poetry run pytest
